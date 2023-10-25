@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1989</title>
+<!--& normalize link -->
+    <link rel="stylesheet" href="normalize.css">
+<!--² font awesome -->
+    <script src="https://kit.fontawesome.com/6dc8da1a32.js" crossorigin="anonymous"></script>
+<!--* web site icon -->
+<link rel="web site icon" href="images/logo.png">
+<!-- ?main css link -->
+    <link rel="stylesheet" href="master.css">
+
+</head>
+<body>
+    <!--& start latest events -->
+    <div class="events" id="events">
+      <div class="dots dots-up"></div>
+      <div class="dots dots-down"></div>
+      <h2 class="main-title">events</h2>
+      <div class="container">
+            <div class="front-face"><img src="images/cover.webp" alt="" "></div>
+        <div class="info">
+          <div class="time">
+            <div class="unit">
+              <span id="days">00</span>
+              <span>days</span>
+            </div>
+            <div class="unit">
+              <span id="hours">00</span>
+              <span>hours</span>
+            </div>
+            <div class="unit">
+              <span id="minutes">00</span>
+              <span>minutes</span>
+            </div>
+            <div class="unit">
+              <span id="seconds">00</span>
+              <span>seconds</span>
+            </div>
+          </div>
+          <h2 class="title">1989 (taylor's version)</h2>
+          <p class="description">1989 (Taylor's Version) is the fourth re-recorded album by American singer-songwriter Taylor Swift, scheduled for release on October 27, 2023</p>
+        </div>
+        <div class="subscribe">
+          <form action="" name="f1">
+            <div class="tooltip">
+              <input type="email" name="email" id="" placeholder="type your email to send you a remember me message before the event">
+            </div>
+            <input type="submit" value="send">
+          </form>
+        </div>
+        </div>
+		</div>
+    <!--& end latest events -->
+		<!--² start discount -->
+		<div class="discount" id="discount">
+			<div class="image">
+				<div class="content">
+					<h2>pre-order now</h2>
+          <p>pre-order before (20 october 2023) to get 30% off </p>
+					<img src="images/discount.png" alt="">
+				</div>
+			</div>
+			<div class="form">
+				<div class="content sec">
+					<h2>fill the form below</h2>
+					<form action="">
+						<input class="input" type="text" name="name" placeholder="your name" id="" spellcheck="false">
+						<input class="input" type="email" name="email" placeholder="your email" id="" spellcheck="false">
+						<input class="input" type="text" name="mobile" placeholder="your phone number" id="" spellcheck="false">
+						<textarea class="input" name="message" placeholder="tell us about your needs"  spellcheck="false"></textarea>
+							<input type="submit" value="send">
+						</form>
+				</div>
+			</div>
+		</div>
+		<!--² end discount -->
+		<!--! start footer -->
+		<footer>
+			<div class="container">
+				<div class="box">
+					<h3>MHD</h3>
+					<div class="social">
+						<div class="wrapper instagram">
+							<a href="#" >
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+						</div>
+						<div class="wrapper github">
+							<a href="#">
+								<i class="fa-brands fa-github"></i>
+							</a>
+						</div>
+						<div class="wrapper twitter">
+							<a href="#">
+								<i class="fa-brands fa-x-twitter"></i>
+							</a>
+						</div>
+            <div class="wrapper paypal">
+							<a href="#">
+								<i class="fa-brands fa-paypal"></i>
+							</a>
+						</div>
+					</div>
+          <div class="time">
+            <i class="fa-solid fa-clock"></i>
+            business hours: from 08:00 to 16:00 
+          </div>
+          <div class="phone">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            +216 97 564 112
+          </div>
+          <div class="copy-right-text">
+            © MHD all rights reserved 2023
+          </div>
+				</div>
+				<!-- <div class="box">
+					<div class="line">
+						<i class="fa-solid fa-location-dot"></i>
+						<address>tunisa,ben arous,chihemmek</address>
+					</div>
+					<div class="line">
+						<i class="fa-solid fa-business-time"></i>
+						<div class="info">business hours: from 08:00 to 16:00</div>
+					</div>
+					<div class="line">
+						<i class="fas fa-phone-volume fa-fw"></i>
+						<div class="info">+216 55 748 122</div>
+            <div class="info">+216 97 472 889</div>
+					</div>
+				</div> -->
+			</div>
+		</footer>
+		<!--! end footer -->
+    <script>
+        const targetDate = new Date('2023-10-27T05:00:00').getTime();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        
+        function updateCountdown() {
+            const currentDate = new Date().getTime();
+            const timeRemaining = targetDate - currentDate;
+        
+            if (timeRemaining <= 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            } else {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                document.getElementById('days').innerHTML = padZeroes(days);
+                document.getElementById('hours').innerHTML = padZeroes(hours);
+                document.getElementById('minutes').innerHTML = padZeroes(minutes);
+                document.getElementById('seconds').innerHTML = padZeroes(seconds);
+            }
+        }
+        function padZeroes(value) {
+            return value.toString().padStart(2, '0');
+        }
+        updateCountdown();
+    </script>
+</body>        
